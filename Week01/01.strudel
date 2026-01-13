@@ -1,0 +1,8 @@
+// @title W01-01
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @by Hubert Sia
+// @date Jan 13, 2026
+
+// 01
+setcps (130/60/4)
+s("[bd bd [bd*2] bd [mt!2] [ht!2] [rim rim] hh hh cr cr oh!2]/2")
