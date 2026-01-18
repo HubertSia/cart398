@@ -5,5 +5,5 @@
 
 // 02
 $: s("cp hh <casio:3> casio:1!4 casio:5!2, casio:3 casio:9, jazz:0 jazz:3!5 jazz:2!3")
-
+$: s("<hh>*2")
 .scope()
