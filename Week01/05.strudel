@@ -1,15 +1,16 @@
 // @title W01-05
 // @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
-// @by vigliensoni
-// @date Jan 5, 2026
+// @by Hubert Sia
+// @date Jan 19, 2026
 
 // 5
-setcps(150/60/4)
-d1: s("bongo:1").euclid(3,8).off(1/4, add(2)).delay(0.025).pan(0)
-d2: s("bongo:2").euclid(5,8).off(1/4, add(2)).delay(0.025).pan(1)
-// d3: s("bongo:12").euclid(6,8).pan(sine)
-d4: s("hh:3*4").gain(0.125)
-$: s("east:0*4").gain(0.125)
-$: s("east:2*8").gain(0.0325)
+$: s("hh*16").gain("[.25 1]*4")
 
-d3: s("bongo*8").n(irand(10))
+$: s("bd*4,[~ sd:1]*2")
+
+$: n("<[c2 c3]*4 [bb1 bb2]*4 [f2 f3]*4 [eb2 eb3]*4>")
+.sound("jazz").lpf(800)
+
+$: s("<cp!3>")
+
+$:s("<bd!5>*5")
