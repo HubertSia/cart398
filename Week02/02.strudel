@@ -1,0 +1,20 @@
+// @title W02-01
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @by Hubert Sia
+// @date Jan 21, 2026
+
+samples({
+   laugh:[ 'https://cdn.freesound.org/previews/842/842294_14303554-hq.mp3',
+            'https://cdn.freesound.org/previews/842/842295_14303554-hq.mp3',
+            'https://cdn.freesound.org/previews/842/842292_14303554-lq.mp3',
+            'https://cdn.freesound.org/previews/842/842281_4369435-lq.mp3',
+           'https://cdn.freesound.org/previews/239/239573_2698284-lq.mp3',
+           'https://cdn.freesound.org/previews/253/253527_875457-lq.mp3'
+   ]
+})
+
+$: s("<[laugh:1?0.5|laugh:2]*2 [laugh:3|laugh:4?0.2]>*2 ") .gain(0.1) 
+ 
+$: s("<[laugh:5!2?0.7|laugh:6!2?0.3]>/2").gain(0.05) 
+
+$: s("<laugh:6?0.2(3,9)>").gain(0.05) 

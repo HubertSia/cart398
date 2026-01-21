@@ -3,4 +3,9 @@
 // @by Hubert Sia
 // @date Jan 20, 2026
 
-s("<cp cp <cp*2> cp <mt!2> <ht!2> <rim rim> hh hh cr cr oh!2>*7" )
+setcps (130/60/4)
+
+note("{c d e f g a b c4, c# d# e# f# g# a# b#}*2") 
+
+.scope()
+
