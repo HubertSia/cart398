@@ -1,0 +1,7 @@
+// @title W02-01
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @by Hubert Sia
+// @date Jan 24, 2026
+
+$: s("cr:6!1")._punchcard()
+$: s("cp:2!8").gain(rand.range(.3,.7)).fast(1.5).degradeBy(.4).rib(954,1)
