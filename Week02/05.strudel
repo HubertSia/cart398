@@ -1,0 +1,8 @@
+// @title W02-05
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @by Hubert Sia
+// @date Jan 26, 2026
+
+$: note("c1, e1 g1 [c# g#]").s("metal").slow(0.5)
+$: note("c2, e3 g3 [c# g#]").s("metal").slow(1)
+$: note("c3, e3 g3 [c# g#]").s("metal").slow(1.5)

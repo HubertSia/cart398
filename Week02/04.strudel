@@ -1,0 +1,11 @@
+// @title W02-04
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @by Hubert Sia
+// @date Jan 25, 2026
+
+const noteBnk = 'tr909'
+
+$: s("hh!8").gain(.2)
+
+$: s("cp").struct("{1 0 0 1 0 1 0 0}%8").bank(noteBnk)._punchcard()
+$: s("sd").bank(noteBnk).beat("4,12", 16)._punchcard()
