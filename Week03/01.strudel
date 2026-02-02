@@ -1,0 +1,10 @@
+// @title W03-01
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @by Hubert Sia
+// @date Jan 27, 2026
+samples({hum: 'https://cdn.freesound.org/previews/816/816686_11764891-lq.mp3'})
+
+
+$: s("hum").splice(10, "3 2 5 4 ").gain(0.2)
+$: s("hum").slice(8, "0 0 0 0 7 7 7 0 0 ").gain(0.4)
+$: s("hum").slice(5, "2 4 2 4 2 2 ").gain(0.5)

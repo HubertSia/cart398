@@ -1,0 +1,20 @@
+// @title W03-02
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @by Hubert Sia
+// @date Jan 31, 2026
+
+$: note("[c!5]").sound(" gm_tubular_bells").gain(0.1)
+
+$: note("[c4!5] [ c4!5]").sound("gm_xylophone").gain(0.1)
+
+
+$: note("c2 <eb2 <g2 g1>>".fast(5)).sound("<gm_slap_bass_1>").gain(0.3)
+//$: note("g1 <g2 <eb2 c2>>".fast(5)).sound("<gm_slap_bass_1>").gain(0.3)
+
+
+$: note("<[c2 c3]*4 [eb2 eb3]*4 [f2 f3]*4 [g2 g3]*4>*1.25 ").sound("gm_acoustic_guitar_nylon").gain(0.5)
+//$: note("<[g2 g3]*4 [f2 f3]*4 [eb2 eb3]*4 [c2 c3]*4>*1.25 ").sound("gm_acoustic_guitar_nylon").gain(0.5)
+
+
+//$: note("<[c2 c3]*4 [eb2 eb3]*4 [f2 f3]*4 [g2 g3]*4>*1.25 ").sound("gm_violin").gain(0.5)
+$: note("<[g2 g3]*4 [f2 f3]*4 [eb2 eb3]*4 [c2 c3]*4>*1.25 ").sound("gm_violin").gain(0.5)

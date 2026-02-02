@@ -1,0 +1,7 @@
+// @title W03-02
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @by Hubert Sia
+// @date Jan 28, 2026
+
+note("e a f e ~f, c [b a g]/2 [e c]!2 ".add("<<12 24> <24 12 12> 38 26>")).gain(0.2)
+ .s("square")
