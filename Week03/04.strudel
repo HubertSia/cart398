@@ -1,19 +1,25 @@
-// @title W03-02
+// @title W03-04
 // @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 // @by Hubert Sia
 // @date Feb 01, 2026
 
+// On start only
 //$: note("<a!3>").sound("gm_pad_new_age").gain(0.8)
 
-//$: note("< e4 f4 e4 >*5").sound(" gm_taiko_drum").gain(0.4)
+
+// Rhythm
+$: note("< e4 f4 e4 >*5").sound(" gm_taiko_drum").gain(0.4)
 
 $: note("<a!3>").sound(" gm_tubular_bells").gain(0.4)
 
+
+// Alternate in-between
+
 //$: note("< e4!3 [f4 e4 d4 e4] [f4 d4 e4] f4 g4 a4 >*5").sound(" gm_orchestral_harp").gain(0.3)
 
-//$: note("<d3 e3 [f3 e3 d3 e3] [f3 d3 e3] e3!3  [f3 e3 d3 e3] [f3 g3 a3] a3 [bb3 a3 g3] >*5").sound(" gm_trumpet").gain(0.5)
+$: note("<d3 e3 [f3 e3 d3 e3] [f3 d3 e3] e3!3  [f3 e3 d3 e3] [f3 g3 a3] a3 [bb3 a3 g3] >*5").sound(" gm_trumpet").gain(0.5)
 
-//$: note("< g3 a3 g3 f3 [g3 f3 e3 d3] [f3 e3 d3 c3] f3 d3 e3 >*5").sound("gm_trumpet").gain(0.5)
+$: note("< g3 a3 g3 f3 [g3 f3 e3 d3] [f3 e3 d3 c3] f3 d3 e3 >*5").sound("gm_trumpet").gain(0.5)
 
 //$: note("< [f3 d3 e3 db3] d3 a3 c3 g2 a3 f2 g2 d2 f2 d2 e2!2  >*5").sound("gm_trumpet").gain(0.5)
 

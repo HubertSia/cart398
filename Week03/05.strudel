@@ -1,0 +1,9 @@
+// @title W03-05
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @by Hubert Sia
+// @date Feb 02, 2026
+
+$: n("1 1 4 2").scale("C:minor").sound("square").gain(0.5)._spiral({ steady: .96 })
+
+
+$: s("bd sd [~ bd] sd").room(0.5).rlp(10000).rfade(0.5)._pianoroll()
