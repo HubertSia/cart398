@@ -1,7 +1,22 @@
-// @title W04-01
+// @title W05-01
 // @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 // @by Hubert Sia
 // @date Feb 07, 2026
- $: note("c1, e1 g1 [c# g#]").s(choose('gm_shamisen', 'gm_electric_guitar_jazz')).slow(0.5).gain(0.6).degradeBy(0.1)._punchcard()
- $: note("c2, e3 g3 [c# g#]").s('gm_shanai').slow(1).gain(0.4).degradeBy(0.5)._punchcard()
- $: note("c3, e3 g3 [c# g#]").s( 'gm_shakuhachi').fast(0.3).gain(1.6).degradeBy(0.1)._punchcard()
+
+$: n("0 2 4 6 4 2")
+   .sound('gm_violin')
+   .scale("G:minor")
+   .room(5).gain(0.3) .lpf(400)
+   .color("purple").scope()
+  
+$: n("<a!3>")
+   .sound(" gm_tubular_bells")
+   .gain(0.4).room(1).lpf(200)
+   .color("pink").scope()
+
+$: s("hum").slice(8, "7 7 7 0 0 4 4 2 2")
+     .gain(0.4)
+     .every(4, x=>x.slow(5).degradeBy(0.5).ply("<4 3>".gain(0.6)))
+     .degradeBy(0.1)
+     .color("white").scope()
+
