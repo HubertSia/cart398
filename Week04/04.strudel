@@ -1,5 +1,32 @@
 // @title W03-04
 // @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 // @by Hubert Sia
-// @date Feb 01, 2026
+// @date Feb 08, 2026
 
+setcps(130/60/4)
+
+samples({
+  'kalimba': { c5:'https://cdn.freesound.org/previews/844/844766_18399160-lq.mp3' }
+})
+const scales = "<C:major C:dorian F:pentatonic [G:minor Gb:major]>"
+
+stack(
+  "[0 2 4 6 9 2 0 -2]*3"
+  .add("<0 2>/4")
+  .scale(scales)
+  .struct("x*8")
+  .velocity("<.8 .3 .6>*8")
+  .slow(2),
+  "<c2 c2 f2 [[F2 C2] db2]>"
+  .scale(scales)
+  .scaleTranspose("[0 <2 4>]*2")
+  .struct("x*4")
+  .velocity("<.8 .5>*4")
+  .velocity(0.8)
+  .slow(2)._spiral({ steady: .96 })
+)
+  .fast(1)
+  .note()
+  .clip("<.4 .8 1 1.2 1.4 1.6 1.8 2>/8")
+  .s('kalimba')
+  .delay(.2)._spiral({ steady: .96 })

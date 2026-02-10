@@ -1,0 +1,14 @@
+// @title W04-05
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @by Hubert Sia
+// @date Feb 09, 2026
+
+$: note("< e4 f4 e4 >*4").sound("gm_taiko_drum").gain(0.25).cutoff(5000).color("white").punchcard()
+
+$: note("<a!3 [a b]!2 a!4 [c4 a]!2>").sound("gm_tubular_bells").gain(0.25).room(0.3).size(0.4).slow(2).color("red").punchcard()
+
+$: note("<d3 e3 [f3 e3 d3 e3] [f3 d3 e3] e3!3 [f3 e3 d3 e3] [f3 g3 a3] a3 [bb3 a3 g3] >*2 <d3 e3 f3 e3 [d3 e3 f3] [e3 d3 e3] e3!3 [f3 g3 a3] [g3 f3 e3] [d3 c3 d3] >*2").sound("gm_trumpet").gain(0.35).room(0.2).color("green").punchcard()
+
+$: note("< g3 a3 g3 f3 [g3 f3 e3 d3] [f3 e3 d3 c3] f3 d3 e3 >*2 < a3 g3 f3 e3 [d3 e3 f3 g3] [c3 d3 e3 f3] d3 e3 f3 >*2").sound("gm_trumpet").gain(0.25).pan(-0.3).room(0.2).color("blue").punchcard()
+
+$: note("<d2!2 a2!2 c2!2 g2!2 d2!2 f2!2 c2!2 e2!2>").sound("gm_fretless_bass").gain(0.15).cutoff(2000).color("yellow").punchcard()

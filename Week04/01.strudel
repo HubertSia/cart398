@@ -1,4 +1,7 @@
-// @title W03-01
+// @title W04-01
 // @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 // @by Hubert Sia
-// @date Jan 27, 2026
+// @date Feb 07, 2026
+ $: note("c1, e1 g1 [c# g#]").s(choose('gm_shamisen', 'gm_electric_guitar_jazz')).slow(0.5).gain(0.6).degradeBy(0.1)._punchcard()
+ $: note("c2, e3 g3 [c# g#]").s('gm_shanai').slow(1).gain(0.4).degradeBy(0.5)._punchcard()
+ $: note("c3, e3 g3 [c# g#]").s( 'gm_shakuhachi').fast(0.3).gain(1.6).degradeBy(0.1)._punchcard()

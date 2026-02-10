@@ -1,5 +1,17 @@
-// @title W03-02
+// @title W04-02
 // @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 // @by Hubert Sia
-// @date Jan 28, 2026
+// @date Feb 06, 2026
 
+$: s("[bassdrum:1|bassdrum:2]*2 [bird|car_door]?0.6")
+$: s("c4 g4 e4 c5 g5 e5 b4 d5")
+    .sound("sine")
+    .lpf(220)
+    .lpq(6)
+$ : s("c4 d4 [e4 g4] b4 ~ a4 c5 e5")
+    .sound("sine")
+    .lpf(100)
+    .lpq(5)
+$: s("bassdrum")
+    .euclid(5, 8)
+    .gain(1)
