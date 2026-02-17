@@ -1,7 +1,7 @@
 // @title W05-01
 // @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 // @by Hubert Sia
-// @date Feb 07, 2026
+// @date Feb 10, 2026
 
 setcps(130/60/5)
 samples({hum: 'https://cdn.freesound.org/previews/816/816686_11764891-lq.mp3'})

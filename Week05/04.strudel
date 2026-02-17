@@ -1,5 +1,9 @@
 // @title W05-04
 // @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 // @by Hubert Sia
-// @date Feb 08, 2026
+// @date Feb 15, 2026
 
+$: s("cp hh <casio:3> casio:1!4 casio:5!2, casio:3 casio:9, jazz:0 jazz:3!5 jazz:2!3")
+$: note("<d3 e3 [f3 e3 d3 e3] [f3 d3 e3] e3!3 [f3 e3 d3 e3] [f3 g3 a3] a3 [bb3 a3 g3] >*2 <d3 e3 f3 e3 [d3 e3 f3] [e3 d3 e3] e3!3 [f3 g3 a3] [g3 f3 e3] [d3 c3 d3] >*2").sound("supersaw ").gain(0.35).room(0.2).color("green")
+.scope()
+$: s("bd sd [~ bd] sd").room(0.5).rlp(10000).rfade(0.5)._pianoroll()    

@@ -1,5 +1,23 @@
 // @title W05-03
 // @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 // @by Hubert Sia
-// @date Feb 07, 2026
+// @date Feb 12, 2026
 
+
+samples({
+  bell: { c6: 'https://cdn.freesound.org/previews/816/816686_11764891-lq.mp3' },
+  bass: { d2: 'https://freesound.orghttps://cdn.freesound.org/previews/518/518765_8278798-lq.mp3' }
+})
+
+stack(
+  n("0").euclidLegato(4,8)
+  .echo(3, 1/16, .5)
+  .add(n(rand.range(0,12)))
+  .scale("D:minor:pentatonic")
+  .velocity(rand.range(.5,1))
+  .s('bell').gain(.6).delay(.2).delaytime(1/3).delayfeedback(.4),
+  // bass
+  note("<D2 A2 G2 F2>").euclidLegatoRot(6,8,4).s('bass').clip(1).gain(.8)
+)
+  .slow(6)
+  .pianoroll({vertical:1})
