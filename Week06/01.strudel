@@ -1,0 +1,19 @@
+// @title W06-01
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @by Hubert Sia
+// @date Feb 17, 2026
+
+setcps(120/60/4)
+
+// Basic MIDI Output
+// Connect to a MIDI device by name (e.g., 'IAC Driver' on Mac, 'loopMIDI' on Windows)
+// javascript// MIDI note numbers (60 = middle C)
+// Swatches - 15
+$: note ("<c!2 g!2 a!2 g -- f!2 e!2 d!2 c -- g!2 f!2 e!2 d -- g!2 f!2 e!2 d -- c!2 g!2 a!2 g -- f!2 e!2 d!2 c --   >*4").fast(0.5).gain(0.3)  
+  .midi('loopMIDI Port')
+
+$: note("< e4 f4 e4 >*5").fast(0.4).sound(" gm_taiko_drum").gain(0.3).firstOf(4, x=>x.rev())
+  .midi('loopMIDI Port')
+
+$: note("<a!3>").sound(" gm_tubular_bells").gain(0.4).slow(0.2)
+   .midi('loopMIDI Port')
