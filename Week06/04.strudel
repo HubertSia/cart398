@@ -5,6 +5,8 @@
 
 setcps(130/60/4)
 
+
+
 $: n("< c2 1 3 2>*8")
 .scale("<G1 D2>/4:major")
 .s("gm_piano").lpf(300).lpenv("<4 3 2>*4")
@@ -15,5 +17,10 @@ $: s("bd!4 [bd*4]!2 bd!2")
   .bank("dmx")
 
 $: s("[~ sd]!2")
-  .gain(0.75)
+  .gain(0.5)
   .bank("akailinn")
+
+$: note("< g3 a3 g3 f3 [g3 f3 e3 d3] [f3 e3 d3 c3] f3 d3 e3 >*2 < a3 g3 f3 e3 [d3 e3 f3 g3] [c3 d3 e3 f3] d3 e3 f3 >*2")
+  .sound("gm_shanai")
+    .gain(0.75)
+  .firstOf(8, x=>x.rev())
