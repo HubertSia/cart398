@@ -1,5 +1,7 @@
 // @title W06-02
 // @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 // @by Hubert Sia
-// @date Feb , 2026
+// @date Feb 18, 2026
 
+$: s("cp hh <casio:3> casio:1!4 casio:5!2, casio:3 casio:9, jazz:0 jazz:3!5 jazz:2!3")
+$: s("<hh>*2")

@@ -5,15 +5,21 @@
 
 setcps(120/60/4)
 
-// Basic MIDI Output
-// Connect to a MIDI device by name (e.g., 'IAC Driver' on Mac, 'loopMIDI' on Windows)
-// javascript// MIDI note numbers (60 = middle C)
-// Swatches - 15
-$: note ("<c!2 g!2 a!2 g -- f!2 e!2 d!2 c -- g!2 f!2 e!2 d -- g!2 f!2 e!2 d -- c!2 g!2 a!2 g -- f!2 e!2 d!2 c --   >*4").fast(0.5).gain(0.3)  
-  .midi('loopMIDI Port')
+ $: note("c1, e1 g1 [c# g#]")
+    .s(choose('gm_shamisen', 'gm_electric_guitar_jazz'))
+    .slow(0.5).gain(0.6)
+    .degradeBy(0.1)
+    ._punchcard()
+    
+    
+ $: note("c2, e3 g3 [c# g#]")
+    .s('gm_shanai')
+    .slow(1)
+    .gain(0.4)
+    .degradeBy(0.5)._punchcard()
 
-$: note("< e4 f4 e4 >*5").fast(0.4).sound(" gm_taiko_drum").gain(0.3).firstOf(4, x=>x.rev())
-  .midi('loopMIDI Port')
-
-$: note("<a!3>").sound(" gm_tubular_bells").gain(0.4).slow(0.2)
-   .midi('loopMIDI Port')
+    $: note("c3, e3 g3 [c# g#]")
+      .s( 'gm_shakuhachi')
+      .fast(0.3)
+      .gain(1.6)
+      .degradeBy(0.1)._punchcard()
