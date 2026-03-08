@@ -1,0 +1,6 @@
+voronoi(350,0.15)
+  	.thresh(.8)
+  	.diff(src(o0).scale(.1))
+	.modulateScale(osc(2).modulateRotate(o0,.74))
+	.brightness([-.02,-.17].smooth().fast(.5))
+	.out()
