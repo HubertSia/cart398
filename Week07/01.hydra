@@ -1,3 +1,8 @@
+// @title W07-01
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @by Hubert Sia
+// @date Feb 25, 2026
+
 voronoi(350,0.15)
   	.thresh(.8)
   	.diff(src(o0).scale(.1))

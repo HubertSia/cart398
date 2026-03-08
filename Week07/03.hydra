@@ -1,3 +1,8 @@
+// @title W06-01
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @by Hubert Sia
+// @date Feb 27, 2026
+
 voronoi(10)
   .color(1,2,3)
   .scale( ()=> 2 * Math.sin(time) + 5 )
