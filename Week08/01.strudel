@@ -1,11 +1,25 @@
-// @title W07-01
+// @title W08-01
 // @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 // @by Hubert Sia
-// @date Feb 25, 2026
+// @date March 03, 2026
 
-voronoi(350,0.15)
-  	.thresh(.8)
-  	.diff(src(o0).scale(.1))
-	.modulateScale(osc(2).modulateRotate(o0,.74))
-	.brightness([-.02,-.17].smooth().fast(.5))
-	.out()
+setcps(100/60/4)
+
+
+
+
+$: note("e a f e ~f, c [b a g]/2 [e c]!2 ".add("<<12 24> <24 12 12> 38 26>"))
+  .sound("supersaw ")
+  .gain(0.35)
+  .room(0.2)
+  .color("green")
+  .scope()
+  .firstOf(2, x=>x.rev())
+
+$:n("<0 2 1 3 2>*8")
+  .scale("<A1 D2>/4:minor:pentatonic")
+  .s("supersaw")
+  .lpf(300)
+  .lpenv("<4 3 2>*4")
+  .firstOf(4, x=>x.rev())
+  .gain(0.5)

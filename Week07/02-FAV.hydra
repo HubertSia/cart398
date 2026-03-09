@@ -1,0 +1,19 @@
+// @title W07-02
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @by Hubert Sia
+// @date Feb 26, 2026
+
+
+osc(42.21, 0.05, 5.841)
+	.mult(osc(20, -0.119, 1)
+		.modulate(noise(5, 10))
+		.rotate(5.707))
+	.posterize([3, 10, 2.406].fast(0.5)
+		.smooth(0.846))
+	.modulateRotate(o0, () => mouse.x * 0.009)
+	.modulateScale(osc(2).modulateRotate(o0,.74))
+  	.diff(src(o0).scale(.1))
+	.out();
+
+
+

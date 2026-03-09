@@ -14,6 +14,7 @@ $: s("cp").struct("{1 0 0 1 0 1 0 0}%8")
   .gain(0.5)
   .firstOf(8, x=>x.rev())
   ._punchcard()
+  
 $: s("sd").bank(noteBnk)
   .beat("4,12", 16)
   .gain(0.3)
@@ -28,7 +29,7 @@ $: note("c2 <eb2 <g2 g1>>")
 
 $: note("<[g2 g3]*4 [f2 f3]*4 [eb2 eb3]*4 [c2 c3]*4>*2 ")
   .sound("gm_lead_8_bass_lead")
-  .gain(0.5)
-  .firstOf(6, x=>x.rev())
+    .gain(0.5)
+    .firstOf(6, x=>x.rev())
 
-  
+    

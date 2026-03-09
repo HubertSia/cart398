@@ -1,37 +1,42 @@
-// @title W06-01
+// @title W08-02
 // @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 // @by Hubert Sia
-// @date Feb 26, 2026
+// @date March 04, 2026
 
 
-voronoi(10)
-  .color(1,2,3)
-  .scale( ()=> 2 * Math.sin(time) + 5 )
-  .out(o0)
-
-voronoi(350,0.15)
-  	.thresh(.8)
-  	.diff(src(o0).scale(.1))
-	.modulateScale(osc(2).modulateRotate(o0,.74))
-	.brightness([-.02,-.17].smooth().fast(.5))
-	.out(o1)
+setcps(135/60/4)
 
 
-voronoi(350,0.15)
-  	.thresh(.8)
-  	.diff(src(o0).scale(.1))
-	.modulateScale(osc(2).modulateRotate(o0,.74))
-	.brightness([-.02,-.17].smooth().fast(.5))
-	.out(o2)
+$:n("<0 2 1 3 2>*8")
+  .scale("<A1 D2>/4:minor:pentatonic")
+  .s("supersaw")
+  .lpf(300)
+  .lpenv("<4 3 2>*4")
+  .firstOf(4, x=>x.rev())
+  .gain(0.5)
 
 
-voronoi(350,0.15)
-  	.thresh(.8)
-  	.diff(src(o0).scale(.1))
-	.modulateScale(osc(2).modulateRotate(o0,.74))
-	.brightness([-.02,-.17].smooth().fast(.5))
-	.out(o3)
-	render()
+$: note("<[g2 g3]*4 [f2 f3]*4 [eb2 eb3]*4 [c2 c3]*4>*1.25 ")
+  .sound("gm_recorder")
+  .slow(2)
+  .gain(0.2)
+  .firstOf(2, x=>x.rev())
 
 
-	render()
+$: s("hh!8").gain(0.2)
+
+
+$: s("sd")
+  .beat("4,12", 16)
+  .gain(0.3)
+
+$: note("<[g2 g3]*4 [f2 f3]*4 [eb2 eb3]*4 [c2 c3]*4> ")
+  .sound("gm_sitar")
+  .gain(0.5)
+  .firstOf(6, x=>x.rev())
+
+$: s("bd sd [~ bd] sd")
+  .room(0.5)
+  .rlp(10000)
+  .rfade(0.5)
+  .gain(0.2)
