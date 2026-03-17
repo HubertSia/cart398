@@ -1,0 +1,20 @@
+// @title W07-01
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @by Hubert Sia
+// @date March 11, 2026
+
+
+// Credit to:
+// Puertas III
+// from Celeste Betancur
+// https://github.com/essteban
+
+
+
+osc(76.257, 0.213, 0.473)
+	.modulateScale(osc(72.749, 0, 0.445)
+		.kaleid(6.015))
+	.repeat(0.376, 7.248)
+	.modulate(o0, 0.094)
+	.modulateKaleid(shape(4.046, 0.167, 1.978))
+	.out(o0);
