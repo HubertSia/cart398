@@ -1,0 +1,18 @@
+// @title W07-01
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @by Hubert Sia
+// @date March 18, 2026
+
+
+osc(9.5, 0.185, 0.315)
+	.modulate(noise(6.936, 0.4), 0.206)
+	.blend(o0, 0.178)
+	.modulateScrollY(osc(2, 0.028)
+		.modulate(osc(0.5)
+			.rotate(0.105), 0.033)
+		.brightness(0.05))
+	.scale(2.329)
+	.color(1.1, 0.887, 0.703)
+	.saturate(1.2)
+	.contrast(1.05)
+	.out();

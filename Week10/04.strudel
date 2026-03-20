@@ -1,0 +1,40 @@
+// @title W07-04
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @by Hubert Sia
+// @date March 15, 2026
+
+setcps(120/60/5)
+
+
+ $: note("<[d3 d3 c3 c3] >*2 <[c3 c2 g3 f3] [d3 d3 e3 f3] >*2 ")
+   .sound("gm_xylophone")
+   .scale("e:major")
+   .gain(0.5)
+   .firstOf(4, x=>x.rev())
+  .color("red").punchcard()
+
+
+$: n("< 3 3 3 2 2 2 5>*8")
+  .scale("e:major")
+  .s("gm_shanai")
+  .gain(0.5)
+  .fast(2)
+  .lpf(300)
+  .gain(0.7)
+  .lpenv("<4 3 2>*4")
+  .firstOf(5, x=>x.rev())  
+  .color("green")
+
+
+$: note("<[c3 c3] e3 d3 [c3 c3 c3 c3] >*2 < a3 d3 f3 e3 [d3 e3 f3 g3] [d3 e3 f3 ] >*2")
+  .sound("gm_shamisen")
+    .gain(0.75)
+  .firstOf(4, x=>x.rev())
+  .color("blue")
+
+
+$: note("<d2!2 a2!2 c2!2 <g2!2 d2!2 f2!2 >*2 c2!2 e2!2>")
+  .sound("gm_recorder")
+  .gain(0.7)
+  .firstOf(3, x=>x.rev())
+  .color("yellow")
