@@ -7,11 +7,11 @@
 setcps(130/60/5)
 
 
- $: note("<[d3 d3 c3 c3] [f3 f3 g2]  >*2 <[c3 c2 g3 f3] [d3 d3 e3 f3] >*2 ")
-   .sound("gm_lead_3_calliope")
-   .scale("e:major")
-   .gain(0.5)
-   .firstOf(4, x=>x.rev())
+  $: note("<[d3 d3 c3 c3] [f3 f3 g2]  >*2 <[c3 c2 g3 f3] [d3 d3 e3 f3] >*2 ")
+    .sound("gm_lead_3_calliope")
+    .scale("e:major")
+    .gain(0.5)
+    .firstOf(4, x=>x.rev())
 
 $: note("<[g3 f3 e3 d3] [f3 e3 d3 c3] f3 d3 e3 >*2 < a3 g3 f3 e3 [d3 e3 f3 g3] [c3 d3 e3 f3] d3 e3 f3 >*2")
   .sound("gm_electric_guitar_clean")
