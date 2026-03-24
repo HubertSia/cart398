@@ -142,10 +142,28 @@
     });
 
     // Patch
-    osc(12, 0.05, 1.5)
-      .kaleid(4)
-      .modulate(noise(3), 0.83)
-      .out();
+    shape(13.777, 0.04, 0.003)
+        .scale(() => 0.957 + Math.sin(time * 0.726) * 0.255)
+        .rotate(() => Math.sin(time * 0.54) * 1.459)
+        .modulate(noise(1.644, 0.305), 0.408)
+        .blend(o0, 0.7)
+        .color(0.8, 0.543, 3.173)
+        .kaleid(5.754)
+        .out(o0);
+      src(o0)
+        .modulate(osc(26.45, 0.03, 1.376), 0.372)
+        .diff(voronoi(5.078, 0, 0.132)
+          .rotate(0.195))
+        .colorama(() => Math.sin(time * 0.406) * 0.502 + 0.486)
+        .saturate(1.17)
+        .contrast(1.751)
+        .out(o1);
+      src(o1)
+        .modulateKaleid(osc(1.797, 0.01, 0.3), 4)
+        .scale(() => 1.619 + Math.sin(time * 0.161) * 0.098)
+        .luma(0.351)
+        .out(o2);
+      render(o2);
   </script>
 
 </body>
