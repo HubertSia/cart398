@@ -234,7 +234,7 @@ window.addEventListener('load', () => {
   initializePositions();
   initTempoPosition();
   animateButtons();
-  window.strudelControls.playPattern();
+  //window.strudelControls.playPattern();
 });
 
 window.addEventListener('resize', () => { initializePositions(); initTempoPosition(); });
